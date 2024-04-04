@@ -32,3 +32,7 @@ cd Automatica.ai
 npm install
 npm run dev
 ```
+
+## Troubleshooting
+
+If you run into issues, please use GitHub Desktop to clone/push/pull.
