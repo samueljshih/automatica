@@ -1,13 +1,12 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
+import Form from "./components/Form";
 
 function App() {
   return (
     <>
-      <h1>Automatica</h1>
-      <form action="">
-        <input type="file" id="resume" name="user_resume" />
-        <input type="submit" />
-      </form>
+      <Navbar />
+      <Form />
     </>
   );
 }
