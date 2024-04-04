@@ -25,7 +25,7 @@ Automatica.ai is licensed under the [MIT License](LICENSE).
 Make sure you have the latest Node.js version from here (v20.12.1): https://nodejs.org/
 
 ```bash
-git clone https://github.com/your_username/Automatica.ai.git
+git clone https://github.com/samueljshih/automatica.git
 cd Automatica.ai
 # Follow installation instructions in README.md
 
