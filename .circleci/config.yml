@@ -10,12 +10,12 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
-          pkg-manager: npm
+          pkg-manager: cd frontend && npm
       - run:
-          command: npm run build
+          command: cd frontend && npm run build
       - run:
           name: Create the ~/artifacts directory if it doesn't exist
-          command: mkdir -p ~/artifacts
+          command: cd frontend && mkdir -p ~/artifacts
       # Copy output to artifacts dir
       - run:
           name: Copy artifacts
@@ -31,7 +31,7 @@ jobs:
       # Replace this with steps to deploy to users
       - run:
           name: deploy
-          command: '#e.g. ./deploy.sh'
+          command: "#e.g. ./deploy.sh"
 workflows:
   build:
     jobs:
