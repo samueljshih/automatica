@@ -1,3 +1,8 @@
 torch==2.2.2
 transformers==4.39.3
 streamlit==1.33.0
+datasets==2.18.0
+accelerate==0.29.2
+streamlit-audiorecorder==0.0.4
+ffmpeg 
+ffprobe
