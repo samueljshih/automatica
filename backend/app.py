@@ -1,7 +1,9 @@
 from flask import Flask, jsonify
 from big_query import bq_client, query_bigquery
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 voicenotes = ['FORTYYY', 'EFFFFF', 'LEZZ GOOOOOO']
 
