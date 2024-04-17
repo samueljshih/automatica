@@ -10,7 +10,7 @@ voicenotes = ['FORTYYY', 'EFFFFF', 'LEZZ GOOOOOO']
 # Index Route
 @app.route('/')
 def index():
-    sql_query = "SELECT * FROM `massive-clone-420421.Automatica.users` LIMIT 1000"
+    sql_query = "SELECT * FROM `massive-clone-420421.Automatica.voicenotes` LIMIT 1000"
     rows =  query_bigquery(sql_query)
     row_data = [dict(row.items()) for row in rows]
     return jsonify(row_data)
