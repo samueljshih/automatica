@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+// TODO: Change to actually voice note
 interface VoiceNote {
   id: number;
   first_name: string;
