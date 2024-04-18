@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// TODO: Change to actually voice note
-interface VoiceNote {
+import Table from "./Table";
+
+export interface VoiceNote {
+  user_id: number;
+  audio_url: string;
+  summary: string;
+  transcription: string;
+}
+
+interface User {
   id: number;
   first_name: string;
   last_name: string;
@@ -25,26 +33,7 @@ const VoiceNotes = () => {
     fetchVoiceNotes();
   }, []);
 
-  const handleVoiceNote = (voiceNote: VoiceNote) => {
-    const { first_name, last_name, email } = voiceNote;
-
-    return (
-      <li
-        className="text-l font-bold mb-6 "
-        key={email}
-      >{`${first_name} ${last_name} ${email}`}</li>
-    );
-  };
-
-  return (
-    <div>
-      {voiceNotes && (
-        <ul className="flex flex-col justify-center items-center">
-          {voiceNotes.map(handleVoiceNote)}
-        </ul>
-      )}
-    </div>
-  );
+  return <div>{voiceNotes && <Table data={voiceNotes} />}</div>;
 };
 
 export default VoiceNotes;
