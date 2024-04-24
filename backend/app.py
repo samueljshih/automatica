@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from big_query import bq_client, query_bigquery
 from flask_cors import CORS
 
@@ -24,6 +24,19 @@ def get_users():
 @app.route('/api/voicenotes', methods=['GET'])
 def get_voicenotes():
     return jsonify(voicenotes)
+
+
+@app.route('/api/voicenotes', methods=['POST'])
+def save_voicenotes():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'}), 400
+    
+    file = request.files['file']
+
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    return jsonify({'message': 'File uploaded successfully'}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
