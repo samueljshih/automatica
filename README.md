@@ -2,6 +2,8 @@
 
 Welcome to Automatica.ai, your ultimate solution for automating tasks using cutting-edge machine learning algorithms.
 
+![Automatica](images/automatica.png)
+
 ## Overview
 
 Automatica.ai is a Python-based project aimed at simplifying the process of automating various tasks through the power of machine learning. Whether you're a seasoned data scientist or a beginner, Automatica.ai offers an intuitive interface and a powerful toolkit to streamline your workflow and boost productivity.

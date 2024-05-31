@@ -23,6 +23,7 @@ const VoiceNotes = () => {
   useEffect(() => {
     const fetchVoiceNotes = async () => {
       try {
+        console.log("Fetching...");
         const response = await axios.get<VoiceNote[]>("http://localhost:5000/");
         setVoiceNotes(response.data);
       } catch (error) {
